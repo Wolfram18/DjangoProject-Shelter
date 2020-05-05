@@ -1,6 +1,7 @@
 from django.urls import path
 from django.urls import re_path
 from django.conf.urls import url
+from app.admin import admin_site
 from app import views
 
 urlpatterns = [
@@ -23,4 +24,5 @@ urlpatterns = [
     path('mail', views.mail),
     path('mail.html', views.mail),
     re_path(r'^mail', views.m404),
+    url(r'^myadmin/', admin_site.urls),
 ]
