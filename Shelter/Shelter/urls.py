@@ -25,4 +25,5 @@ urlpatterns = [
     path('mail.html', views.mail),
     re_path(r'^mail', views.m404),
     url(r'^myadmin/', admin_site.urls),
+    url(r'^send/$', views.send),
 ]

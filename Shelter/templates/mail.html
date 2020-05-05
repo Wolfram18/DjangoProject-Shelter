@@ -21,11 +21,12 @@
                     <p>Ваше письмо будет обработано в течение 24 часов. Выбор темы Вашего письма сильно облегчит нам жизнь)</p>
                 </div>
                 <br>
-                <form class="formWithValidation">
+
+                <form id="form" method="POST" class="formWithValidation">
                   <div class="row">
                       <div class="form-group col-md-12">
                           <label for="theme" class="h4">Выберете тему:</label>
-                          <select class="form-control" id="theme">
+                          <select class="form-control" id="theme" name="theme">
                               <option>Взять животное</option>
                               <option>Волонтёрство</option>
                               <option>Помощь</option>
@@ -51,10 +52,29 @@
                   </div>
                   <div class="form-group">
                       <label for="message" class="h4 ">Введите ваше сообщение:</label>
-                      <textarea id="message" class="form-control field" rows="5" placeholder="Сообщение"></textarea>
+                      <textarea id="message" name="message" class="form-control field" rows="5" placeholder="Сообщение"></textarea>
                   </div>
                   <button type="submit" id="form-submit" class="btn btn-success btn-lg pull-right">Отправить</button>
                 </form>
+
+                <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+                <script type="text/javascript">
+                   $(function() {
+                      $("#form").on("submit", function() {
+                         var theme = $('#theme').val();
+                         var firstname = $('#firstname').val();
+                         var secondname = $('#secondname').val();
+                         var phone = $('#phone').val();
+                         var email = $('#email').val();
+                         var message = $('#message').val();
+                         $.get("/send/", {"theme": theme, "firstname": firstname, "secondname": secondname, "phone": phone, "email": email, "message": message})
+                             .done(function(data) {
+                            alert(data);
+                         });
+                      });
+                    });
+                </script>
+
             </div>  
         </div>
     </div> 
