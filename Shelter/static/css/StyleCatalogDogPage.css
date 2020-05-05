@@ -1,0 +1,56 @@
+#dog {
+    font-family: 'Sriracha';
+    background: #F5DEB3;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#dog .card{
+    background: white;
+    border-radius: 10px;
+}
+
+#dog .card-title{
+    margin-top: 5px;
+}
+
+#dog .parameters {
+    text-align: left;
+}
+
+#dog h3 {
+    font-size: 25px;
+    padding-top: 0px;
+}
+
+#dog p {
+    font-size: 20px;
+}
+
+#dog img {
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
+}
+
+#dog .btn {
+    color: #bdbdbd;
+    background: #3c763d;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+}
+
+#dog .btn:hover, .btn:focus {
+    color: white;
+    background: #2d2d2d;
+}

@@ -1,0 +1,47 @@
+#input_forms {
+    font-family: 'Sriracha';
+    background: #F5DEB3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#input_forms h3 {
+    font-size: 30px;
+    padding-top: 0px;
+    padding-bottom: 10px;
+}
+
+#input_forms p {
+    font-size: 20px;
+    text-indent: 30px;
+}
+
+#input_forms label {
+    font-size: 22px;
+}
+
+#input_forms select, #input_forms input {
+    height: 45px;
+    font-size: 22px;
+}
+
+#input_forms textarea {
+    font-size: 22px;
+    height: 200px;
+    resize: none; 
+}
+
+#input_forms .btn {
+    color: #bdbdbd;
+    background: #2d2d2d;
+    border-color: #2d2d2d;
+    font-size: 25px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#input_forms .btn:hover, .btn:focus {
+    color: white;
+    background: #2d2d2d;
+}

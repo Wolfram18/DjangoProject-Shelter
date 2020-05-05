@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block css %}<link rel="stylesheet" href="../static/css/StyleCatalogDogPage.css">{% endblock css %}
+{% block header %}
+    <li><a href="home.html">О нас</a></li>
+    <li class="active">
+        <a href="dog.html">Каталог собак</a>
+    </li>
+    <li><a href="cat.html">Каталог кошек</a></li>
+    <li><a href="volunteering.html">Волонтёрство</a></li>
+    <li><a href="help.html">Помощь</a></li>
+    <li><a href="mail.html"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a></li>
+{% endblock header %}
+{% block content %}
+    <div id="dog">
+        <div class="container">
+            <h3>Кораблю безопасно в гавани, но не для этого строят корабли. Кораблю безопасно в гавани, но не для этого строят корабли. Кораблю безопасно в гавани, но не для этого строят корабли. Кораблю безопасно в гавани, но не для этого строят корабли.</h3>
+            <br>
+            <div class="row centered">
+            {% if dog_list.count > 0 %}
+              {% for dog in dog_list %}
+              <div class="col-lg-12">
+                <div class="card md-3" style="margin-bottom: 30px;">
+                  <div class="row no-gutters" style="margin-left: 0px; margin-right: 0px;">
+                    <div class="col-sm-6" style="padding-right: 0px; padding-left: 0px;">
+                        <img src="{{ dog.dog_image }}" class="card-img rounded float-right" alt="Собака">
+                    </div>
+                    <div class="col-sm-6" style="padding-right: 30px; padding-left: 30px;">
+                      <div class="card-body">
+                        <h3 class="card-title" style="overflow-wrap: break-word;">{{ dog.dog_name }}</h3>
+                        <div class="parameters" style="overflow-wrap: break-word;">
+                            <p class="card-text"><b>Порода: {{ dog.dog_race }}</b></p>
+                            <p class="card-text"><b>Возраст: {{ dog.dog_age }}</b></p>
+                            <p class="card-text"><b>Пол: {{ dog.dog_gender }}</b></p>
+                        </div>
+                        <p class="card-text">{{ dog.dog_description }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-gutters" style="margin-left: 0px; margin-right: 0px;">
+                        <div class="col-sm-6">
+                          <a href="{{ dog.dog_url }}" class="btn btn-lg" role="button" aria-disabled="true" style="margin-top: 10px; margin-top: 10px; width: 100%; max-width: 400px;">Подробнее</a>
+                        </div>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

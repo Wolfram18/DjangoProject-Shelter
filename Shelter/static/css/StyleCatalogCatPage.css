@@ -1,0 +1,76 @@
+#cat {
+    font-family: 'Sriracha';
+    background: #F5DEB3;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#cat .card{
+    background: white;
+    border-radius: 10px;
+    /*margin-bottom: 30px;*/
+}
+/*
+#cat .card_image{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#cat .card_content{
+    padding-right: 30px;
+    padding-left: 30px;
+}
+*/
+#cat .card-title{
+    margin-top: 5px;
+    /*overflow-wrap: break-word;*/
+}
+
+#cat .parameters {
+    text-align: left;
+    /*overflow-wrap: break-word;*/
+}
+
+#cat h3 {
+    font-size: 26px;
+    padding-top: 0px;
+}
+
+#cat p {
+    font-size: 20px;
+}
+
+#cat img {
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    -o-object-fit: cover;
+    object-fit: cover;
+    object-position: center;
+}
+
+#cat .btn {
+    color: #bdbdbd;
+    background: #2d2d2d;
+    font-size: 25px;
+    padding: 5px;
+}
+
+#cat .btn:hover, .btn:focus {
+    color: white;
+    background: #2d2d2d;
+}
+/*
+#cat .liked {
+    color: #2d2d2d;
+    background: lightpink;
+}
+
+#cat .liked:hover, .btn:focus {
+    color: #2d2d2d;
+    background: rgb(204, 84, 102);
+}
+*/

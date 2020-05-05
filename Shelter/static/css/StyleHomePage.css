@@ -1,0 +1,59 @@
+#about_us, #catalog_dog, #volunteering {
+    font-family: 'Sriracha';
+    background: #F5DEB3;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#intro, #catalog_cat, #help {
+    font-family: 'Sriracha';
+    background: white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#about_us h3, #intro h3, #catalog_dog h3, #catalog_cat h3, #volunteering h3, #help h3 {
+    font-size: 26px;
+    padding-top: 0px;
+}
+
+#intro h4, #help h4 {
+    font-size: 23px;
+}
+
+#about_us p, #intro p, #catalog_dog p, #catalog_cat p,  #volunteering p, #help p {
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-indent: 30px;
+}
+
+#about_us .panel {
+    border-color: orange;
+}
+
+#about_us .panel-heading {
+    background: #ffd890;
+    border-color: orange;
+    font-size: 22px;
+}
+
+#catalog_dog img, #catalog_cat img, #volunteering img, #help .help_img {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+#catalog_dog .btn, #catalog_cat .btn, #volunteering .btn, #help .btn {
+    color: #bdbdbd;
+    background: #2d2d2d;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#catalog_dog .btn:hover, .btn:focus, #catalog_cat .btn:hover, .btn:focus, #volunteering .btn:hover, .btn:focus, #help .btn:hover, .btn:focus {
+    color: white;
+    background: #2d2d2d;
+}

@@ -1,0 +1,45 @@
+#who, #how {
+    font-family: 'Sriracha';
+    background: #F5DEB3;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#what {
+    font-family: 'Sriracha';
+    background: white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#who h3, #what h3, #how h3 {
+    font-size: 26px;
+    padding-top: 0px;
+}
+
+#who p, #what p, #how p {
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-indent: 30px;
+}
+
+#who img, #what img, #how img {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+#who .btn, #what .btn, #how .btn {
+    color: #bdbdbd;
+    background: #2d2d2d;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#who .btn:hover, .btn:focus, #what .btn:hover, .btn:focus, #how .btn:hover, .btn:focus {
+    color: white;
+    background: #2d2d2d;
+}

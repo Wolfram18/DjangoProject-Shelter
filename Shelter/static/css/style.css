@@ -1,0 +1,116 @@
+body {
+    background-color: #F5DEB3;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+    margin-top: 70px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sriracha';
+    font-weight: 300;
+    color: #333;
+}
+
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.centered {
+    text-align: center;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/* Меню */
+.navbar {
+    font-family: 'Lato';
+    font-size: 18px;
+    font-weight: 800;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar .navbar-brand {
+    font-weight: bolder;
+    font-size: 22px;
+    letter-spacing: 1px;
+    pointer-events: none;
+}
+
+#headerwrap {
+    font-family: 'Sriracha';
+    color: white;
+    background: url("../images/dog (11).jpg") center top no-repeat;
+    margin-top: -10px;
+    padding-top: 140px;
+    text-align: center;
+    background-position: center center;
+    min-height: 500px;
+    width: 100%;
+    background-size: 100%;
+    -webkit-background-size: cover;
+    -maz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h1 {
+    margin-top: 20px;
+    font-size: 70px;
+    font-weight: 300;
+    letter-spacing: 3px;
+}
+
+#headerwrap h2 {
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#headerwrap i, #copy i {
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+}
+
+#headerwrap i:hover, i:focus, #copy i:hover, i:focus {
+    color: #F5DEB3;
+}
+
+.tilt {
+    -webkit-transition: all 0.5s ease;
+    -maz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.tilt:hover {
+    -webkit-transform: rotate(-2deg);
+    -maz-transform: rotate(-2deg);
+    -o-transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+}
+
+#copy {
+    background: #2d2d2d;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+#copy i {
+    color: #bdbdbd;
+}

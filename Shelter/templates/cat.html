@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block css %}<link rel="stylesheet" href="../static/css/StyleCatalogCatPage.css">{% endblock css %}
+{% block header %}
+                  <li><a href="home.html">О нас</a></li>
+                  <li><a href="dog.html">Каталог собак</a></li>
+                  <li class="active">
+                      <a href="cat.html">Каталог кошек</a>
+                  </li>
+                  <li><a href="volunteering.html">Волонтёрство</a></li>
+                  <li><a href="help.html">Помощь</a></li>
+                  <li><a href="mail.html"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></a></li>              
+{% endblock header %}
+{% block content%}
+    <!-- Каталог кошек -->
+    <div id="cat">
+        <div class="container">
+            <h3>Кораблю безопасно в гавани, но не для этого строят корабли. Кораблю безопасно в гавани, но не для этого строят корабли. Кораблю безопасно в гавани, но не для этого строят корабли. Кораблю безопасно в гавани, но не для этого строят корабли.</h3>
+            <br>
+            <div class="row centered">
+                 {% if cat_list.count > 0 %}
+                    {% for cat in cat_list %}
+              <div class="col-lg-12">
+                <div class="card md-3" style="margin-bottom: 30px;">
+                  <div class="row no-gutters" style="margin-left: 0px; margin-right: 0px;">
+                    <div class="col-sm-6" style="padding-right: 0px; padding-left: 0px;">
+                        <img src="{{ cat.cat_image }}" class="card-img rounded float-right" alt="Кошка">
+                    </div>
+                    <div class="col-sm-6" style="padding-right: 30px; padding-left: 30px;">
+                      <div class="card-body">
+                        <h3 class="card-title" style="overflow-wrap: break-word;">{{ cat.cat_image }}</h3>
+                        <div class="parameters" style="overflow-wrap: break-word;">
+                            <p class="card-text"><b>Порода: {{ cat.cat_race }}</b></p>
+                            <p class="card-text"><b>Возраст: {{ cat.cat_age }}</b></p>
+                            <p class="card-text"><b>Пол: {{ cat.cat_gender }}</b></p>
+                        </div>
+                        <p class="card-text">{{ cat.cat_description }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row no-gutters" style="margin-left: 0px; margin-right: 0px;">
+                        <div class="col-sm-6">
+                          <a href="{{ cat.cat_url }}" class="btn btn-lg" role="button" aria-disabled="true" style="margin-top: 10px; margin-top: 10px; width: 100%; max-width: 400px;">Подробнее</a>
+                        </div>
+                  </div>
+                </div>
+              </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

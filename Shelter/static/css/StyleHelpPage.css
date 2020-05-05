@@ -1,0 +1,45 @@
+#money {
+    font-family: 'Sriracha';
+    background: #F5DEB3;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#nomoney {
+    font-family: 'Sriracha';
+    background: white;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+#money h3, #nomoney h3 {
+    font-size: 26px;
+    padding-top: 0px;
+}
+
+#money p, #nomoney p {
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-indent: 30px;
+}
+
+#money img, #nomoney img {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+#nomoney .btn {
+    color: #bdbdbd;
+    background: #2d2d2d;
+    font-size: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#nomoney .btn:hover, .btn:focus {
+    color: white;
+    background: #2d2d2d;
+}
