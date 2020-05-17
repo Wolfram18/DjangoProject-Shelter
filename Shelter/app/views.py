@@ -1,4 +1,5 @@
 from django.core.mail import send_mail, BadHeaderError, EmailMessage
+from django.conf import settings
 from django.shortcuts import render
 from django.http import *
 from app.models import Dog, Cat
@@ -34,7 +35,7 @@ def m404(request):
     return HttpResponseNotFound("<h2>Not Found</h2>")
 
 
-def send(request,emailto):
+def send(request):
     if request.is_ajax():
         theme = request.GET.get('theme', 'Fail')
         firstname = request.GET.get('firstname', 'Fail')
@@ -42,19 +43,10 @@ def send(request,emailto):
         phone = request.GET.get('phone', 'Fail')
         from_email = request.GET.get('email', 'Fail')
         message = request.GET.get('message', 'Fail')
-        # msg = EmailMessage(
-        #     subject=u'Тема письма',
-        #     body=u'тело сообщения тут',
-        #     from_email='yandexUser@ya.ru',
-        #     to=('java.test.mail@yandex.ru',),
-        #     headers={'From': 'email_from@me.com'}
-        # )
-        # msg.content_subtype = 'html'
-        # msg.send()
-        if theme and message and from_email:
-            try:
-                (theme, message, from_email, ['java.test.mail@yandex.ru'])
-            except BadHeaderError:
-                return HttpResponse('Invalid header found')
-            return HttpResponseRedirect("Отправлено!")
-    return HttpResponse("Отправлено!")
+        # if theme and message and from_email:
+        #    try:
+        send_mail(theme, message, settings.EMAIL_HOST_USER, ['ruleva.18@yandex.ru'])
+        #    except BadHeaderError:
+        #       return HttpResponse('Invalid header found')
+        #   return HttpResponseRedirect("Отправлено!")
+    return HttpResponse("Отправлено! " + message)
