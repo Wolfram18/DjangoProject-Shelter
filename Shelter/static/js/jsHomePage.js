@@ -7,10 +7,10 @@ $( function () {
     
       block.text( count );
       
-      if( count === 453 ) {
+      if( count === 12 ) {
       	clearInterval( interval );
       }
-  	}, 1 );
+  	}, 40 );
   
   block.text( count );
 } );
@@ -24,10 +24,10 @@ $( function () {
     
       block.text( count );
       
-      if( count === 763 ) {
+      if( count === 57 ) {
       	clearInterval( interval );
       }
-  	}, 1 );
+  	}, 40 );
   
   block.text( count );
 } );

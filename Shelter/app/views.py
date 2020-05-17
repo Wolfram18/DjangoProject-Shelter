@@ -36,17 +36,18 @@ def m404(request):
 
 
 def send(request):
-    if request.is_ajax():
-        theme = request.GET.get('theme', 'Fail')
-        firstname = request.GET.get('firstname', 'Fail')
-        secondname = request.GET.get('secondname', 'Fail')
-        phone = request.GET.get('phone', 'Fail')
-        from_email = request.GET.get('email', 'Fail')
-        message = request.GET.get('message', 'Fail')
-        # if theme and message and from_email:
-        #    try:
-        send_mail(theme, message, settings.EMAIL_HOST_USER, ['ruleva.18@yandex.ru'])
-        #    except BadHeaderError:
-        #       return HttpResponse('Invalid header found')
-        #   return HttpResponseRedirect("Отправлено!")
-    return HttpResponse("Отправлено! " + message)
+    # if request.is_ajax():
+    theme = request.GET.get('theme', 'Fail')
+    firstname = request.GET.get('firstname', 'Fail')
+    secondname = request.GET.get('secondname', 'Fail')
+    phone = request.GET.get('phone', 'Fail')
+    from_email = request.GET.get('email', 'Fail')
+    message = request.GET.get('message', 'Fail')
+    mail = 'Отправитель: ' + secondname + ' ' + firstname + '\n' + 'Телефон:' + phone + '\n' + 'Email: ' + \
+           from_email + '\n' + message
+    if theme and firstname and secondname and phone and from_email and message:
+        send_mail(theme, mail, settings.EMAIL_HOST_USER, ['java.test.mail@yandex.ru'])
+        return HttpResponse('Отправлено!')
+    else:
+        return HttpResponse('Не все данные введены!')
+    # return HttpResponse('Отправлено!')
