@@ -47,6 +47,7 @@ def send(request):
            from_email + '\n' + message
     if theme and firstname and secondname and phone and from_email and message:
         send_mail(theme, mail, settings.EMAIL_HOST_USER, ['java.test.mail@yandex.ru'])
+
         return HttpResponse('Отправлено!')
     else:
         return HttpResponse('Не все данные введены!')
